@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:net_bookstore/auth/login.dart';
+import 'package:net_bookstore/auth/register.dart';
 import 'package:net_bookstore/constants/constants.dart';
 import 'package:net_bookstore/widgets/my_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -87,9 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 flex: 1,
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: size.height * 0.08,
-                    ),
+                    const Spacer(),
                     _currentPage + 1 == 4
                         ? const SizedBox.shrink()
                         : SmoothPageIndicator(
@@ -111,6 +111,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   textColor: Colors.black,
                                   text: 'Register',
                                   isLoaded: false,
+                                  onTap: () {
+                                    Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const RegisterPage()),
+                                        (route) => false);
+                                  },
                                 ),
                                 const SizedBox(
                                   height: 20,
@@ -120,6 +128,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   textColor: Colors.black,
                                   text: 'Login',
                                   isLoaded: false,
+                                  onTap: () {
+                                    Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LoginPage()),
+                                        (route) => false);
+                                  },
                                 ),
                               ],
                             ),
