@@ -49,31 +49,31 @@ class _BottomNavState extends State<BottomNav> {
             BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.homeAlt,
-                  size: 25,
+                  size: 20,
                 ),
                 label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.search,
-                  size: 25,
+                  size: 20,
                 ),
                 label: 'Search'),
             BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.listCheck,
-                  size: 25,
+                  size: 20,
                 ),
                 label: 'History'),
             BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.book,
-                  size: 25,
+                  size: 20,
                 ),
                 label: 'Books'),
             BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.userCheck,
-                  size: 25,
+                  size: 20,
                 ),
                 label: 'User'),
           ]),
